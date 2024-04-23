@@ -1,0 +1,55 @@
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#menu {
+    z-index: 999;
+    background-color: #6E6C6C;
+    color: #D6D3C5;
+}
+
+#menu a.active {
+    background-color: #F1F0EA;
+    color: #6E6C6C;
+}
+
+#head {
+    z-index: 999;
+    background-color: #D8CBA6;
+    color: #534B52;
+}
+
+.card {
+    border: 1px solid #534B52;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #534B52;
+}
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEF17C; /* Cambia el color de fondo según tu preferencia */
+    padding: 10px;
+}
+
+.f1, #calendar {
+    color: #534B52;
+}
+
+.mod {
+    color: #827500;
+}
+
+.line {
+    height: 1px;
+    background-color: #534B52; /* Cambia el color de la línea según tu preferencia */
+}
+
+.checkbox {
+    border: 1px solid #707070;
+    background-color: #f1f5f9;
+}

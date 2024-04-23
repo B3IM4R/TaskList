@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es" style="background-color: #F1F0EA;" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Tareas Pendientes</title>
+</head>
+<body>
+    <div id="menu" class="fixed bottom-0 left-0 right-0 bg-base-200 p-3">
+        <ul class="menu menu-horizontal w-full">
+            <li class="w-1/4">
+                <a class="tooltip flex flex-col items-center justify-center active" data-tip="Tareas Pendientes">
+                    <i class="bi bi-house-fill text-3xl mx-auto"></i>
+                    <div class="text-base text-center">Inicio</div>
+                </a>
+            </li>
+            <li class="w-1/4">
+                <a class="tooltip flex flex-col items-center justify-center" data-tip="Lista de Tareas" href="lista.html">
+                    <i class="bi bi-list-check text-3xl mx-auto"></i>
+                    <div class="text-base text-center">Lista</div>
+                </a>
+            </li>
+            <li class="w-1/4">
+                <a class="tooltip flex flex-col items-center justify-center" data-tip="Detalles de Tareas" href="detalles.html">
+                    <i class="bi bi-pencil-square text-3xl mx-auto"></i>
+                    <div class="text-base text-center">Detalle</div>
+                </a>
+            </li>
+            <li class="w-1/4">
+                <a class="tooltip flex flex-col items-center justify-center" data-tip="Salir" href="login.html">
+                    <i class="bi bi-box-arrow-left text-3xl mx-auto"></i>
+                    <div class="text-base text-center">Salir</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+<div class="mb-36">
+  <div class="fixed top-0 left-0 right-0 text-white p-5 lg:ps-24" id="head">
+    <h1 class="text-xl font-medium">Tareas Pendientes</h1>
+    <p class="text-sm pt-2">Agrega nuevas tareas para planificar tu día!</p>
+  </div>
+  <div class="relative mt-32 ml-5 lg:ps-20">
+      <button id="openFormBtn" class="bg-blue-500 hover:bg-blue-700 text-white py-3 px-4 rounded-full">
+          + Agregar Tarea
+      </button>
+  </div>
+
+  <div id="taskList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-4 lg:px-20">
+      <!-- Aquí se agregarán dinámicamente las tarjetas de tareas -->
+  </div>
+
+  <div id="taskForm" class="hidden fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+    <div class="bg-white p-5 rounded-lg w-96">
+        <h2 class="text-lg font-medium mb-3">Nueva Tarea</h2>
+        <form id="addTaskForm">
+            <div class="form-control mb-3">
+                <label class="label">
+                    <span class="label-text">Fecha:</span>
+                </label>
+                <input type="date" id="date" name="date" class="input input-bordered" required>
+            </div>
+            <div class="form-control mb-3">
+                <label class="label">
+                    <span class="label-text">Prioridad:</span>
+                </label>
+                <select id="priority" name="priority" class="select select-bordered" required>
+                    <option value="Baja">Baja</option>
+                    <option value="Moderada">Moderada</option>
+                    <option value="Urgente">Urgente</option>
+                </select>
+            </div>
+            <div class="form-control mb-3">
+                <label class="label">
+                    <span class="label-text">Categoría:</span>
+                </label>
+                <input type="text" id="category" name="category" class="input input-bordered" required>
+            </div>
+            <div class="form-control mb-3">
+                <label class="label">
+                    <span class="label-text">Tarea:</span>
+                </label>
+                <input type="text" id="task" name="task" class="input input-bordered" required>
+            </div>
+            <button type="submit" class="btn bg-blue-500 hover:bg-blue-700 text-white w-full text-base font-medium rounded-full">Agregar Tarea</button>
+        </form>
+    </div>
+  </div>
+</div>
+<script src="js/script.js"></script> <!-- Vincula el archivo JavaScript -->
+</body>
+</html>
